@@ -414,7 +414,7 @@ IoT-TEG can be adapted according to the improvements of the fall detection proto
  measure the movement of the body. This parameter is analysed in order to know its behaviour during two type of falls.
  \item \textbf{A new functionality of the IoT-TEG system} which allows to simulate the behaviour of different event attributes in order 
  to generate test events following a specific pattern.
- \item \textbf{A study of the fall detection prototype evolution}; the system from one version to another has suffered some improvements. 
+ \item \textbf{A study of the fall detection prototype evolution}; the system which is been used has suffered some improvements. 
  We describe the evolution its architecture, how the data is analysed and the founded problems.
  \item \textbf{New definitions of two type of falls}; after the analysis of the acceleration during two type of falls a new definition
  for each one has been done. The obtained data of the fall detection prototype is used to define a EPL of EsperTech pattern to detect 
@@ -427,7 +427,7 @@ solutions for fall-detection. Section~\ref{sec:background} provides the basic
 knowledge of falls, Event Processing Languages and IoT-TEG tool. The architecture
 of the fall detection system, the fall analysis and some founded problems are 
 introduced in Section~\ref{sec:basicprototype}. Section~\ref{sec:improvedprototype}
-describes the improvements on the basic prototype, a new fall analysis and
+describes the improvements on the prototype, a new fall analysis and
 a comparison of the obtained results. Finally, in Section~\ref{sec:conclusions}, 
 we conclude our paper and make recommendations for future work.
 
@@ -517,7 +517,7 @@ The weak point of this method is the differentiation between jumping into bed an
 
 The approach used to detect falls is based on the basic idea proposed by~\cite{Gjoreski2014,Kozina}. A typical acceleration pattern during 
 a fall-event is a decreasing acceleration close to 0g (free fall), followed by an increasing acceleration value (see Figure~\ref{fig:grafica}). In a stationary position, 
-the acceleration measured is around 1g ((9.81$m/s^{2}$) and during falling around 0g (0$m/s^{2}$). Upon the impact to the ground (fall-event), 
+the acceleration measured is around 1g (9.81$m/s^{2}$) and during falling around 0g (0$m/s^{2}$). Upon the impact to the ground (fall-event), 
 the maximum acceleration (peak-value) is reached for a short time period and it is greater than 1g. This pattern can be used to 
 detect fall-events using the integrated accelerometer of the sensor nodes (S1-S4). Important to know is that the acceleration 
 magnitude which is illustrated in the Formula~\ref{eq:acel} was used for the fall-detection:
@@ -843,7 +843,7 @@ the acceleration in the fall, the Roll variable is defined by a range where the 
 
 \subsection{Founded problems}
 
-Should be a subsection or maybe a paragraph?
+\textbf{*We should talk about synchronisation, the person have to wait after falling and the duration of the battery*}
 
 \section{Up-grated prototype}
 \label{sec:improvedprototype}
@@ -851,8 +851,7 @@ Should be a subsection or maybe a paragraph?
 \subsection{Architecture}
 \label{sub:improvedprototypearchitecture}
 
-\textbf{*To talk about the difference between the basic and improved prototype and
-the new fall definition.*}
+\textbf{*To talk about the improvements in the prototype*}
 
 \subsection{Fall simulation test events} % \subsection{Experiment process}
 
@@ -934,8 +933,14 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
   </custom_conditions>
 \end{lstlisting}
 
+\textbf{* Like with the RBF fall, we should include a new fall definition of FAW type of fall.*}
+
+\textbf{* We must compare the prototype with and without the improvements*}
+
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
+
+\textbf{*We talk about new functionalities in IoT-TEG related with the future work in the fall detection prototype.*}
 
 \section*{Acknowledgment}
 
