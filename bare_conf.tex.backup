@@ -844,13 +844,6 @@ operations and the references to another variables. Moreover, the \texttt{sequen
 values lower or higher than the one generated previously. The \texttt{sequence} property values are \texttt{inc}, 
 to increase the value, or \texttt{dec}, to decrease the value.
 
-Thanks to the included properties and parameters in the IoT-TEG new functionality, the desired behaviour rules can
-be defined. In the RBF fall rules, the involved event attribute is the acceleration, and its behaviour during the 
-fall is defined by four rules; in the first rule the acceleration value increases to a value close or equal to \texttt{Roll},
-in the second rule the acceleration value decreases to a value close or equal to \texttt{Fall}, in the third rule the 
-acceleration value is equal to \texttt{Impact}, it obtains the highest value and in the fourth rule the acceleration value
-is established in a range which is lower than \texttt{Roll}.
-
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RB fall},label=RBFFallRules]
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
@@ -871,9 +864,6 @@ is established in a range which is lower than \texttt{Roll}.
   </rules>
   </custom_conditions>
 \end{lstlisting}
-
-It is needed to highlight that to obtain these rules to define the behaviour of the acceleration several test
-have been done. Once that we obtained the desired results, test events were generated as it was necessary.
 
 \subsection{Founded problems}
 
