@@ -40,45 +40,45 @@ Warning--empty year in Kozina
 Warning--empty journal in Luder2009
 
 Done.
-You've used 24 entries,
+You've used 25 entries,
             4087 wiz_defined-function locations,
-            969 strings with 12032 characters,
-and the built_in function-call counts, 13402 in all, are:
-= -- 1035
-> -- 305
+            974 strings with 12130 characters,
+and the built_in function-call counts, 13726 in all, are:
+= -- 1058
+> -- 309
 < -- 73
-+ -- 162
-- -- 65
-* -- 581
-:= -- 2112
-add.period$ -- 51
-call.type$ -- 24
-change.case$ -- 22
++ -- 164
+- -- 66
+* -- 589
+:= -- 2168
+add.period$ -- 53
+call.type$ -- 25
+change.case$ -- 23
 chr.to.int$ -- 171
-cite$ -- 27
-duplicate$ -- 1030
-empty$ -- 1198
-format.name$ -- 72
-if$ -- 3080
+cite$ -- 28
+duplicate$ -- 1060
+empty$ -- 1234
+format.name$ -- 73
+if$ -- 3153
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 195
-newline$ -- 95
-num.names$ -- 24
-pop$ -- 514
+int.to.str$ -- 25
+missing$ -- 202
+newline$ -- 98
+num.names$ -- 25
+pop$ -- 533
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1039
+skip$ -- 1067
 stack$ -- 0
-substring$ -- 426
-swap$ -- 722
+substring$ -- 427
+swap$ -- 737
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 24
+type$ -- 25
 warning$ -- 3
-while$ -- 54
-width$ -- 26
-write$ -- 224
+while$ -- 55
+width$ -- 27
+write$ -- 231
 (There were 6 error messages)
