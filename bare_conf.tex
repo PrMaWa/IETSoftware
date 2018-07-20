@@ -727,7 +727,7 @@ happen is less than a time window of 1 second, to meet the fact described in~\ci
 the acceleration values are normalised according to their impact value. The tables Table~\ref{tabla:Rango1} and Table~\ref{tabla:Rango2}
 show the values to analyse where the impact value is highlighted with colour green.
 
-\begin{table}
+\begin{table}[!h]
   \centering
   \begin{minipage}[t]{.48\textwidth}
     \centering
@@ -759,7 +759,7 @@ Moreover, the acceleration in these two RBF falls follow the rule that define a 
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.5]{Comparativa}
+  \includegraphics[scale=0.4]{img/Comparativa}
   \caption[Acceleration comparative]{Acceleration comparative.}
   \label{fig:Sensor1}
 \end{figure}
@@ -851,7 +851,7 @@ in the second rule the acceleration value decreases to a value close or equal to
 acceleration value is equal to \texttt{Impact}, it obtains the highest value and in the fourth rule the acceleration value
 is established in a range which is lower than \texttt{Roll}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RB fall},label=RBFFallRules]
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RBF fall},label=RBFFallRules]
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
@@ -873,13 +873,21 @@ is established in a range which is lower than \texttt{Roll}.
 \end{lstlisting}
 
 It is needed to highlight that to obtain these rules to define the behaviour of the acceleration several test
-have been done. Once that we obtained the desired results, test events were generated as it was necessary.
+have been done. Once that we obtained the desired results, test events were generated as it was necessary. The 
+Figure~\ref{fig:IoTTEGRBFGeneratedEvents} shows the acceleration values of some of the generated RBF falls using
+IoT-TEG and the new functionality.
 
-\subsection{Founded problems}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.25]{img/IoTTEGRBFGeneratedEvents}
+  \caption[IoT-TEG generated RBF falls]{IoT-TEG generated RBF falls.}
+  \label{fig:IoTTEGRBFGeneratedEvents}
+\end{figure}
 
-\textbf{*We should talk about synchronisation, the person have to wait after falling and the duration of the battery*}
+The generated events which simulate RBF falls follow the acceleration values that the original RBF falls contain.
+So, these generated events can be used to test the fall detection system.
 
-\section{Up-grated prototype}
+\section{Improved prototype}
 \label{sec:improvedprototype}
 
 \subsection{Architecture}
@@ -901,11 +909,13 @@ have to be detected ($N(m/s^2) > 0,7$). After applying the previous rule in all 
 because the mentioned factors, the impacts are detected.
 
 \subsubsection*{Fall identification and analysis} Once the peaks are detected, a range of values, including the peaks, 
-are selected in order to analyse data properly. The range of extracted values are a set of data that happen is less 
-than a time window of 1 second, to meet the fact described in~\cite{Luder2009}. The Table~\ref{tabla:FAW} shows the 
+are selected in order to analyse data properly and to study the acceleration behaviour while FAW fall. 
+The range of extracted values are a set of data that happen is less 
+than a time window of 1 second, to meet the fall rule of~\cite{Luder2009} described in Equation~(\ref{eq:caida}). 
+The Table~\ref{tabla:FAW} shows the 
 acceleration value while one FAW fall of person 1 and person 2. 
 
-\begin{table}
+\begin{table}[!h]
  \centering
  \begin{tabular}{*{5}{r}}
    \input{table-FAW}
@@ -920,9 +930,9 @@ the normalised acceleration values ($N(m/s^2)$) according to the fall maximum va
 of the normalised acceleration behaviour while the previous FAW falls of person 1 and person 2 is shown. These comparisons show a 
 similar behaviour of the acceleration during the FAW fall.
 
-\begin{figure}
+\begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.4]{img/FAWComparison.png}
+  \includegraphics[scale=0.35]{img/FAWComparison.png}
   \caption[Acceleration during FAW fall]{Acceleration comparison during FAW fall.}
   \label{fig:FAWcomparison}
 \end{figure}
@@ -970,6 +980,56 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
 \textbf{* Like with the RBF fall, we should include a new fall definition of FAW type of fall.*}
 
 \textbf{* We must compare the prototype with and without the improvements*}
+
+\subsection{Founded problems}
+
+After testing the used fall detection prototype, some problems were 
+found. Moreover, some considerations will be applied in future tests.
+
+First of all, we are going to explain the problems related to the prototype; problems related to its hardware and
+software. Talking about the software, the synchronisation in the prototype is an issue; we have founded the following problems:
+
+\begin{itemize}
+ \item In one hand, the falls from the beginning always should be discarded because the sensors are sending a lot of data. 
+ Let us say that in ``fall 1'', there are more than 100 values in a second, and later in ``fall 3'', there are 
+ 35 values in a second. So, in order to analyse the falls and compare the acceleration behaviour, it is 
+ difficult to work with that information. A comparison of two FAW falls with the synchronisation problem is shown
+ in Figure~\ref{fig:synchronisation1}; the sensor 1 acceleration values for the first FAW fall are coloured in blue and the
+ sensor 1 acceleration values for the second FAW fall are coloured in red. The first fall is one fall from the beginning
+ of the simulation, and the second one is from the middle of the simulation.
+ \begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.2]{img/synchronisation1.png}
+  \caption[Comparison acceleration during two FAW falls]{Synchronisation problem; comparison of acceleration values during two FAW falls.}
+  \label{fig:synchronisation1}
+ \end{figure}
+ 
+ \item On the other hand, the sensors transmit more data than the others; no matter the fall, the sensors are not 
+ sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
+ simulation, but the obtained acceleration values were from three of them, one of the sensor does not transmit data 
+ in one moment of the simulation, see Figure~\ref{fig:synchronisation2}.
+ \begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.2]{img/synchronisation2.png}
+  \caption[Comparison acceleration during two FAW falls]{Synchronisation problem; acceleration values from the four sensors during a FAW fall.}
+  \label{fig:synchronisation2}
+ \end{figure}
+\end{itemize}
+
+If we focus our attention to the hardware, the duration of the battery is also something to improve. Nowadays the 
+duration of the battery is X, and if we want use this IoT system in people, specially in elderly people, or people
+that need special treatment, we have to increase the duration of the battery in order to charge it as little as
+possible.
+
+The study has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.
+This is because the person that is falling for the simulation, stands up very fast. Given that we have been cautious
+in our analysis and we have been checking not only the values but also the videos and matching them, we have detected
+this issue. So, in our future tests, the person that is falling should wait at least 2 seconds lying on the floor 
+after the fall for a better fall simulation. In a real situation, if a person falls and stand up means that the person
+is conscious and is able to move and call to the emergency services, if it is necessary. On the contrary, if the person
+falls and do not stand up means that maybe the person is unconscious or is not able to move and call to the emergency
+services. Therefore, waiting at least 2 seconds between falls will help not only to understand better the behaviour of the 
+acceleration but also to do a better fall simulation.
 
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
