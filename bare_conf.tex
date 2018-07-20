@@ -702,8 +702,6 @@ The fall to generate the test events have been selected from~\cite{Li2009,Pannur
 In this study one person have been analysed; he has been doing for a period of 2 minutes the RBF fall. The analysed 
 data and videos can be found in ~\cite{}. In the following lines the steps to simulate the fall with the generated events are described:
 
-\textbf{*Mirar el tiempo que estuvo cayendo*}
-
 \subsubsection*{1. Study of the values} Given that the sensor 1 is the one that suffer the impact, its acceleration values are the first
 to be analysed. The Figure~\ref{fig:Sensor1Sombras} shows the acceleration data from sensor 1 while the person was falling. 
 The goal is to study the acceleration behaviour while a fall in order to generate test events, so the acceleration values are 
@@ -748,13 +746,13 @@ show the values to analyse where the impact value is highlighted with colour gre
   \end{minipage}
 \end{table}
 
-\textbf{*Mirar los datos originales del prototipo 1 para comprobar el timestamp*}
-  % Dependiendo del timestamp, cambiar la tabla para añadirlo, o indicar que en los datos orignales no hab´ia y por eso se inicializan
-  %a cero para compararlos
-The first columns of the Tables represent the milliseconds ($ms$) when the acceleration was measured. The second
-columns show the acceleration values ($m/s^2$) and in the third columns are deployed the normalised acceleration values 
-($N(m/s^2)$) according to the fall maximum value. In Figure~\ref{fig:Sensor1} a comparison of the normalised acceleration behaviour 
-while the previous RBF falls is shown. This comparison show a similar behaviour of the acceleration during the RBF falls.
+The obtained data do not have a timestamp, so given that every 10 milliseconds the system sends the data, we have
+divided the values according to this time. To compare the RBF falls the time in the tables Table~\ref{tabla:Rango1} 
+and Table~\ref{tabla:Rango2} stars in 0 ms and then increase in 10 milliseconds ($ms$), that is what it is shown in 
+the first columns of the Tables. The second columns show the acceleration values ($m/s^2$) and in the third columns
+are deployed the normalised acceleration values ($N(m/s^2)$) according to the fall maximum value. In 
+Figure~\ref{fig:Sensor1} a comparison of the normalised acceleration behaviour while the previous RBF falls is shown. 
+This comparison show a similar behaviour of the acceleration during the RBF falls.
 Moreover, the acceleration in these two RBF falls follow the rule that define a fall, see Equation~\ref{eq:caida}.
 
 \begin{figure}[!h]
@@ -879,7 +877,7 @@ IoT-TEG and the new functionality.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.25]{img/IoTTEGRBFGeneratedEvents}
+  \includegraphics[scale=0.3]{img/IoTTEGRBFGeneratedEvents}
   \caption[IoT-TEG generated RBF falls]{IoT-TEG generated RBF falls.}
   \label{fig:IoTTEGRBFGeneratedEvents}
 \end{figure}
@@ -1004,6 +1002,8 @@ software. Talking about the software, the synchronisation in the prototype is an
   \label{fig:synchronisation1}
  \end{figure}
  
+ \textbf{*To include a table with the data in order to understand the problem*}
+ 
  \item On the other hand, the sensors transmit more data than the others; no matter the fall, the sensors are not 
  sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
  simulation, but the obtained acceleration values were from three of them, one of the sensor does not transmit data 
@@ -1017,11 +1017,11 @@ software. Talking about the software, the synchronisation in the prototype is an
 \end{itemize}
 
 If we focus our attention to the hardware, the duration of the battery is also something to improve. Nowadays the 
-duration of the battery is X, and if we want use this IoT system in people, specially in elderly people, or people
-that need special treatment, we have to increase the duration of the battery in order to charge it as little as
-possible.
+duration of the battery is around 2 or 3 weeks, it depends on its use. If we want to use this IoT system in people, 
+specially in elderly people, or people that need special treatment, we have to increase the duration of the battery 
+in order to change it as little as possible.
 
-The study has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.
+The analysis has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.
 This is because the person that is falling for the simulation, stands up very fast. Given that we have been cautious
 in our analysis and we have been checking not only the values but also the videos and matching them, we have detected
 this issue. So, in our future tests, the person that is falling should wait at least 2 seconds lying on the floor 

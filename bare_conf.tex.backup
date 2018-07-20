@@ -727,7 +727,7 @@ happen is less than a time window of 1 second, to meet the fact described in~\ci
 the acceleration values are normalised according to their impact value. The tables Table~\ref{tabla:Rango1} and Table~\ref{tabla:Rango2}
 show the values to analyse where the impact value is highlighted with colour green.
 
-\begin{table}
+\begin{table}[!h]
   \centering
   \begin{minipage}[t]{.48\textwidth}
     \centering
@@ -759,7 +759,7 @@ Moreover, the acceleration in these two RBF falls follow the rule that define a 
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.5]{Comparativa}
+  \includegraphics[scale=0.4]{img/Comparativa}
   \caption[Acceleration comparative]{Acceleration comparative.}
   \label{fig:Sensor1}
 \end{figure}
@@ -851,7 +851,7 @@ in the second rule the acceleration value decreases to a value close or equal to
 acceleration value is equal to \texttt{Impact}, it obtains the highest value and in the fourth rule the acceleration value
 is established in a range which is lower than \texttt{Roll}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RB fall},label=RBFFallRules]
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RBF fall},label=RBFFallRules]
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
@@ -874,10 +874,18 @@ is established in a range which is lower than \texttt{Roll}.
 
 It is needed to highlight that to obtain these rules to define the behaviour of the acceleration several test
 have been done. Once that we obtained the desired results, test events were generated as it was necessary. The 
-Figure~\ref{fig:IoTTEGRBFGeneratedEvents} shows the acceleration values of some of the generated events using
+Figure~\ref{fig:IoTTEGRBFGeneratedEvents} shows the acceleration values of some of the generated RBF falls using
 IoT-TEG and the new functionality.
 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.25]{img/IoTTEGRBFGeneratedEvents}
+  \caption[IoT-TEG generated RBF falls]{IoT-TEG generated RBF falls.}
+  \label{fig:IoTTEGRBFGeneratedEvents}
+\end{figure}
 
+The generated events which simulate RBF falls follow the acceleration values that the original RBF falls contain.
+So, these generated events can be used to test the fall detection system.
 
 \section{Improved prototype}
 \label{sec:improvedprototype}
@@ -907,7 +915,7 @@ than a time window of 1 second, to meet the fall rule of~\cite{Luder2009} descri
 The Table~\ref{tabla:FAW} shows the 
 acceleration value while one FAW fall of person 1 and person 2. 
 
-\begin{table}
+\begin{table}[!h]
  \centering
  \begin{tabular}{*{5}{r}}
    \input{table-FAW}
@@ -924,7 +932,7 @@ similar behaviour of the acceleration during the FAW fall.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=0.4]{img/FAWComparison.png}
+  \includegraphics[scale=0.35]{img/FAWComparison.png}
   \caption[Acceleration during FAW fall]{Acceleration comparison during FAW fall.}
   \label{fig:FAWcomparison}
 \end{figure}
@@ -1009,8 +1017,8 @@ software. Talking about the software, the synchronisation in the prototype is an
 \end{itemize}
 
 If we focus our attention to the hardware, the duration of the battery is also something to improve. Nowadays the 
-duration of the battery is X, and if we want use this IoT system in people, specially in elderly people, or people
-that need special treatment, we have to increase the duration of the battery in order to charge it as little as
+duration of the battery is around 2 or 3 weeks, it depends on its use, and if we want use this IoT system in people, specially in elderly people, or people
+that need special treatment, we have to increase the duration of the battery in order to change it as little as
 possible.
 
 The study has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.
