@@ -1066,9 +1066,10 @@ First of all, we are going to explain the problems related to the prototype; pro
 software. Talking about the software, the synchronisation in the prototype is an issue; we have founded the following problems:
 
 \begin{itemize}
- \item In one hand, the falls from the beginning always should be discarded because the sensors are sending a lot of data. 
- The Table~\ref{tabla:Synchro} will be used to explain the Let us say that in ``fall 1'', there are more than 100 values in a second, and later in ``fall 3'', there are 
- 35 values in a second. So, in order to analyse the falls and compare the acceleration behaviour, it is 
+ \item In one hand, the falls from the beginning always should be discarded because the sensors are 
+ sending a lot of data. The Table~\ref{tabla:Synchro} will be used to explain the problem. Let us say 
+ that in ``fall 1'', there are more than 30 values that define the fall, and later in ``fall 3'', there are 
+ 12 values that define the fall. So, in order to analyse the falls and compare the acceleration behaviour, it is 
  difficult to work with that information. A comparison of two FAW falls with the synchronisation problem is shown
  in Figure~\ref{fig:synchronisation1}; the sensor 1 acceleration values for the first FAW fall are coloured in blue and the
  sensor 1 acceleration values for the second FAW fall are coloured in red. The first fall is one fall from the beginning
@@ -1089,6 +1090,10 @@ software. Talking about the software, the synchronisation in the prototype is an
   \caption[Comparison acceleration during two FAW falls]{Synchronisation problem; comparison of acceleration values during two FAW falls.}
   \label{fig:synchronisation1}
  \end{figure}
+ 
+ The acceleration values show that in less than 250 milliseconds there are more than 30 values from ``fall 1'', and
+ in more than 350 milliseconds there are 12 values from ``fall 2''. There is a lack of synchronisation not only in
+ the amount of data, but also in the time.
  
  \item On the other hand, the sensors transmit more data than the others; no matter the fall, the sensors are not 
  sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
@@ -1120,7 +1125,16 @@ acceleration but also to do a better fall simulation.
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
 
-\textbf{*We talk about new functionalities in IoT-TEG related with the future work in the fall detection prototype.*}
+The generated events using IoT-TEG follow the behaviour of the analysed falls: RBF and FAW. The implemented functionality 
+allows to generate events by defining rules which describe a desired behaviour. We can assign behaviour rules as many 
+event attributes as the event type contains, and the values of each event attribute will follow the assigned behaviour.
+
+According to the falls, we have detected the necessity to define the EPL query for each fall in the literature; this will
+help to identify a fall from a no-fall. Moreover, it will be interesting to add different type of sensors such as air
+pressure, and medical data such as ECG, in order to identify and define the falls.
+
+The main goal of this study is to improve IoT-TEG tool in order to generate faithful test events which simulate the 
+relevant situations that want to be filtered and, sometimes, very difficult to imitate.
 
 \section*{Acknowledgment}
 

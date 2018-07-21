@@ -1125,7 +1125,24 @@ acceleration but also to do a better fall simulation.
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
 
-\textbf{*We talk about new functionalities in IoT-TEG related with the future work in the fall detection prototype.*}
+The generated events using IoT-TEG follow the behaviour of the analysed falls: RBF and FAW. The implemented functionality 
+allows to generate events by defining rules which describe a desired behaviour. We can assign behaviour rules as many 
+event attributes as the event type contains, and the values of each event attribute will follow the assigned behaviour.
+
+According to the falls, we have detected the necessity to define the EPL query for each fall in the literature; this will
+help to identify a fall from a no-fall. Moreover, it will be interesting to add different type of sensors such as air
+pressure, and medical data such as ECG, in order to identify and define the falls.
+
+The main goal of this study is to improve IoT-TEG tool in order to generate faithful test events which simulate the 
+relevant situations that want to be filtered and, sometimes, very difficult to imitate: adverse environment conditions, 
+rise or fall in blood pressure, heart attack, falls... IoT-TEG is an ongoing tool, so more functionalities will be added
+to cover the test necessities. In order to improve IoT-TEG, more real events will be analysed which let us know 
+the real situations and behaviour of the events.
+
+The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
+for event attributes which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
+to generate dependent values thanks to the \texttt{dependece} property. This property generate the event attribute value 
+according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
 
 \section*{Acknowledgment}
 
