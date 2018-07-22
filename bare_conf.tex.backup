@@ -489,7 +489,7 @@ of two wearable sensor nodes. These two nodes comprise an accelerometer and gyro
 node B, (see Figure~\ref{fig:simulation}). The principle of this method differentiates between static postures and dynamic postures: 
 
 \begin{itemize}
- \item Static postures: standing, sitting, lying and bending.
+ \item Static postures: standing, sitting, laying and bending.
  \item Dynamic postures
  \begin{itemize}
   \item Activities of daily life: walking, walk on stairs, sit, jump, lay down and run.
@@ -511,8 +511,8 @@ as follows:
 
 \begin{enumerate}
  \item Phase activity analysis: check if person is in a static or dynamic position.
- \item Phase position analysis: if existing posture coincides with static posture, check whether the actual position corresponds to lying.
- \item Phase state transition analysis: if lying position, examine whether this transition was intentional or unintentional. The previous 5 
+ \item Phase position analysis: if existing posture coincides with static posture, check whether the actual position corresponds to laying.
+ \item Phase state transition analysis: if laying position, examine whether this transition was intentional or unintentional. The previous 5 
  seconds are used to analyse it. In the case that this position was unintentional, the system classifies it as a fall. 
 \end{enumerate}
 
@@ -746,7 +746,7 @@ time in milliseconds (ms) is in X edge.
 While performing the data analysis, it has to be taken into account that the values suffer 
 alterations because several factors: the person movement, the person bounces against something 
 (floor, wall, etc), the collocation of the sensors to the original position after a fall, 
-sensor pressure because an impact or the person is lying over it, etc.
+sensor pressure because an impact or the person is laying over it, etc.
 
  \begin{figure*}[!h]
   \includegraphics[scale=0.375]{Sensor1Sombras}
@@ -821,7 +821,7 @@ when the impact occurs ($\alpha_{max}$), the acceleration behaviour during a RBF
  The person is falling, a free fall.
  \item the acceleration value goes from the minimum value $\alpha_{min}$ to the maximum value $\alpha_{max}$. The person
  suffers the impact.
- \item the acceleration value is established with values around the half of $\alpha_{max}$. The person is lying on the floor. 
+ \item the acceleration value is established with values around the half of $\alpha_{max}$. The person is laying on the floor. 
 \end{enumerate}
 
 The same analysis process has been done to the rest of sensors, and the behaviour of the acceleration of all of them 
@@ -1021,7 +1021,7 @@ The acceleration behaviour during the FAW consists on:
  consequence of a rebound.
  \item a second impact happens when the person hit the ground, the acceleration normalised values has to 
  be greater than 0,7.
- \item finally, the person is lying on the ground and the normalised acceleration value decreases. The 
+ \item finally, the person is laying on the ground and the normalised acceleration value decreases. The 
  values of the normalised acceleration are between [0, 0,35] and no subtle peaks appear. 
 \end{enumerate}
 
@@ -1036,14 +1036,16 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
-   <variable name="Base" min="0.0" max="500.0"/>
-   <variable name="Impact" min="$(Base)*0.7" 
-                             max="$(Impact)/2+0.5"/>
+   <variable name="Walk" min="0.0" max="500.0"/>
+   <variable name="ImpactWall" min="40.0" max="156.96"/>
    <variable name="Fall" min="0.0" max="$(Roll)/5"/>
+   <variable name="Impact" min="40.0" max="156.96"/>
+   <variable name="Laying" min="" max=""/>
   </variables>
   <rules>
    <rule weight="0.25" min="$(Roll)/4" max="$(Roll)" 
                                     sequence="inc"/>
+   <rule weight="1" value="$(ImpactWall)"/>
    <rule weight="0.25" min="$(Roll)" max="$(Fall)" 
                                     sequence="dec"/>
    <rule weight="1" value="$(Impact)"/>
@@ -1115,7 +1117,7 @@ in order to change it as little as possible.
 The analysis has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.
 This is because the person that is falling for the simulation, stands up very fast. Given that we have been cautious
 in our analysis and we have been checking not only the values but also the videos and matching them, we have detected
-this issue. So, in our future tests, the person that is falling should wait at least 2 seconds lying on the floor 
+this issue. So, in our future tests, the person that is falling should wait at least 2 seconds laying on the floor 
 after the fall for a better fall simulation. In a real situation, if a person falls and stand up means that the person
 is conscious and is able to move and call to the emergency services, if it is necessary. On the contrary, if the person
 falls and do not stand up means that maybe the person is unconscious or is not able to move and call to the emergency
@@ -1134,7 +1136,15 @@ help to identify a fall from a no-fall. Moreover, it will be interesting to add 
 pressure, and medical data such as ECG, in order to identify and define the falls.
 
 The main goal of this study is to improve IoT-TEG tool in order to generate faithful test events which simulate the 
-relevant situations that want to be filtered and, sometimes, very difficult to imitate.
+relevant situations that want to be filtered and, sometimes, very difficult to imitate: adverse environment conditions, 
+rise or fall in blood pressure, heart attack, falls... IoT-TEG is an ongoing tool, so more functionalities will be added
+to cover the test necessities. In order to improve IoT-TEG, more real events will be analysed which let us know 
+the real situations and behaviour of the events.
+
+The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
+for event attributes which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
+to generate dependent values thanks to the \texttt{dependece} property. This property generate the event attribute value 
+according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
 
 \section*{Acknowledgment}
 
