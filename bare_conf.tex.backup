@@ -406,7 +406,7 @@ The first step of this prototype is to identify a fall from a fast movement, a s
 down move, but the final goal of the to be finished system is to predict the falls and act to prevent 
 them. Given that to test this system is crucial, test events which simulate falls are necessary. In 
 the literature can be found different type of falls, and it is necessary to identify all of them in 
-order to tell them apart from a no-fall; in this study two type of falls will be analysed. 
+order to tell them apart from a no-fall; in this study two types of falls will be analysed. 
 
 IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} is a tool which automatically generates test events 
 of many types. Thanks to the obtained data from the sensors we have checked that the measured 
@@ -443,13 +443,15 @@ we conclude our paper and make recommendations for future work.
 \section{Related work}
 \label{sec:relatedwork}
 
-An overview about event generators reveals that the first event generators~\cite{dobbs2004houches,mangano2005tools} were focused on 
-extremely specific topics such as environmental conditions for the simulation of high energy physics events at particle colliders. Nowadays,
-the people and business need to control and monitor the things around them. The received information allows them
-to make decisions and to act according to it. This is the reason of the creation of the IoT Platforms, which are the
-key for the development of scalable IoT applications and services that connect objects, systems and people to each other.
-However, not every IoT Platform is an IoT Platform~\cite{iot-analytics:2015}; for instance, some event generators that are integrated in an
-enterprise software packages, which are increasingly allowing the integration of IoT devices, are often not advanced enough
+An overview about event generators reveals that the first event generators~\cite{dobbs2004houches,mangano2005tools}
+were focused on extremely specific topics such as environmental conditions for the simulation of high energy 
+physics events at particle colliders. Nowadays, we can find papers that address the same issues~\cite{Grzegorczyk}, but 
+the technology surrounds us and the people and business need to control and monitor the things around them. 
+The received information allows them to make decisions and to act according to it. This is the reason 
+of the creation of the IoT Platforms, which are the key for the development of scalable IoT applications and 
+services that connect objects, systems and people to each other. However, not every IoT Platform is an IoT 
+Platform~\cite{iot-analytics:2015}; for instance, some event generators that are integrated in an enterprise 
+software packages, which are increasingly allowing the integration of IoT devices, are often not advanced enough
 to be classified as a full IoT Platform. Examples are given in the following lines:
 
 The Timing System~\cite{Finland:2016} provides a complete timing distribution system including timing signal generation. Its event
@@ -590,7 +592,7 @@ runtime. While the execution is taking place, EPL queries will be triggered if t
     -> temp2.temperature > 400]
  \end{lstlisting}
  
-In the above example (see Example~\ref{EPLqueries}) a ``Nuclear central'' needs to measure the temperature
+In the above example (see Example~\ref{EPLqueries}) a ``Nuclear reactor'' needs to measure the temperature
 of its systems, its temperature gauges take a reading of the core temperature every second and send the data 
 to a central monitoring system. The EPL of EsperTech query throws a warning if we have 2 consecutive 
 temperatures above a certain threshold (400). This is a situation where a quick reaction to emerging patterns 
@@ -731,10 +733,12 @@ to the same person.
 \subsection{Fall simulation test events} % \subsection{Experiment process}
 
 The fall to generate the test events have been selected from~\cite{Li2009,Pannurat2014}. 
-The fall consists on rolling in the bed and fall (RBF). In this study one person has been 
-analysed; he has been doing RBF type falls for a period of 2 minutes. The analysed 
+The fall consists on rolling in the bed and fall (RBF). In this study we have used a 
+healthy subject, and we have recorded falls with all possible realism while also
+trying to avoid risks. The person has been doing RBF type falls for a period of 2 minutes. The analysed 
 data and videos can be found in ~\cite{}. In the following lines the steps to simulate 
-the fall with the generated events are described:
+the fall with the generated events are described, theses steps are very similar to the 
+ones followed by~\cite{colladomachine,colladoTriaxal}:
 
 \subsubsection*{1. Study of the values} Given that the sensor 1 is the one that suffers the
 impact, its acceleration values are the first to be analysed. The Figure~\ref{fig:Sensor1Sombras} 
@@ -1036,21 +1040,17 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
-   <variable name="Walk" min="0.0" max="500.0"/>
+   <variable name="Base" value="9.8"/>
    <variable name="ImpactWall" min="40.0" max="156.96"/>
-   <variable name="Fall" min="0.0" max="$(Roll)/5"/>
    <variable name="Impact" min="40.0" max="156.96"/>
-   <variable name="Laying" min="" max=""/>
+   <variable name="Laying" value="10"/>
   </variables>
   <rules>
-   <rule weight="0.25" min="$(Roll)/4" max="$(Roll)" 
-                                    sequence="inc"/>
+   <rule weight="0.25" min="$(Base)-5" max="$(Base)+5"/>
    <rule weight="1" value="$(ImpactWall)"/>
-   <rule weight="0.25" min="$(Roll)" max="$(Fall)" 
-                                    sequence="dec"/>
+   <rule weight="0.25" min="$(Base)-5" max="$(Fall)+5"/>
    <rule weight="1" value="$(Impact)"/>
-   <rule weight="0" min="$(Roll)/2-0.25" 
-                              max="$(Roll)/2+0.25"/>
+   <rule weight="0" min="$(Laying)-3" max="$(Laying)+3"/>
   </rules>
   </custom_conditions>
 \end{lstlisting}
@@ -1097,7 +1097,7 @@ software. Talking about the software, the synchronisation in the prototype is an
  in more than 350 milliseconds there are 12 values from ``fall 2''. There is a lack of synchronisation not only in
  the amount of data, but also in the time.
  
- \item On the other hand, the sensors transmit more data than the others; no matter the fall, the sensors are not 
+ \item On the other hand, some sensors transmit more data than the others; no matter the fall, the sensors are not 
  sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
  simulation, but the obtained acceleration values were from three of them, one of the sensor does not transmit data 
  in one moment of the simulation, see Figure~\ref{fig:synchronisation2}.
@@ -1110,8 +1110,8 @@ software. Talking about the software, the synchronisation in the prototype is an
 \end{itemize}
 
 If we focus our attention to the hardware, the duration of the battery is also something to improve. Nowadays the 
-duration of the battery is around 2 or 3 weeks, it depends on its use. If we want to use this IoT system in people, 
-specially in elderly people, or people that need special treatment, we have to increase the duration of the battery 
+duration of the battery is around 2 or 3 weeks, it depends on its use. If we want to use this IoT system with patients, 
+specially with elderly people, or people that need special treatment, we have to increase the duration of the battery 
 in order to change it as little as possible.
 
 The analysis has revealed that while we were studying the acceleration data, some of its values could be misinterpreted.

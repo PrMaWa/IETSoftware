@@ -84,6 +84,11 @@ M.~L. Mangano and T.~J. Stelzer, ``Tools for the simulation of hard hadronic
   collisions,'' \emph{Annu. Rev. Nucl. Part. Sci.}, vol.~55, pp. 555--588,
   2005.
 
+\bibitem{Grzegorczyk}
+K.~Grzegorczyk, V.~Baggiolini, and K.~Zieliński, ``Complex event processing
+  approach to automated monitoring of particle accelerator and its control
+  system,'' vol.~15, 01 2014.
+
 \bibitem{iot-analytics:2015}
 IoT-Analytics, ``White paper - iot platforms - the central backbone for the
   internet of things,''
@@ -145,6 +150,16 @@ O.~Etzion and P.~Niblett, \emph{Event Processing in Action}, 1st~ed.\hskip 1em
 N.~Pannurat, S.~Thiemjarus, and E.~Nantajeewarawat, ``Automatic fall
   monitoring: A review,'' \emph{Sensors}, vol.~14, no.~7, pp. 12\,900--12\,936,
   2014.
+
+\bibitem{colladomachine}
+A.~Collado-Villaverde, M.~D. R-Moreno, D.~F. Barrero, and D.~Rodriguez,
+  ``Machine learning approaches to detect elderly people falls using sound,''
+  vol. 10350, 2017.
+
+\bibitem{colladoTriaxal}
+A.~Collado~Villaverde, M.~R-Moreno, D.~Barrero, and D.~Rodriguez,
+  \emph{Triaxial Accelerometer Located on the Wrist for Elderly People’s Fall
+  Detection}, 09 2016.
 
 \bibitem{Arduino2018}
 Arduino, ``Arduino website,''

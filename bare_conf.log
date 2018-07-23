@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.16)  22 JUL 2018 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.16)  23 JUL 2018 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,33 +866,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: img/BasePrototype.png Graphic file (type png)
 
 <use img/BasePrototype.png>
-Package pdftex.def Info: img/BasePrototype.png used on input line 504.
+Package pdftex.def Info: img/BasePrototype.png used on input line 506.
 (pdftex.def)             Requested size: 162.00237pt x 150.86095pt.
 
 <img/FallGraph.png, id=19, 283.0575pt x 226.59656pt>
 File: img/FallGraph.png Graphic file (type png)
  <use img/FallGraph.png>
-Package pdftex.def Info: img/FallGraph.png used on input line 540.
+Package pdftex.def Info: img/FallGraph.png used on input line 542.
 (pdftex.def)             Requested size: 212.29259pt x 169.94699pt.
 
 [3 <./img/BasePrototype.png> <./img/FallGraph.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 587.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 589.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 588.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 590.
 
 <./img/IoT-EGArquitecture.png, id=30, 245.718pt x 327.624pt>
 File: ./img/IoT-EGArquitecture.png Graphic file (type png)
 
 <use ./img/IoT-EGArquitecture.png>
-Package pdftex.def Info: ./img/IoT-EGArquitecture.png used on input line 615.
+Package pdftex.def Info: ./img/IoT-EGArquitecture.png used on input line 617.
 (pdftex.def)             Requested size: 159.7148pt x 212.95306pt.
 
 
@@ -904,17 +904,17 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (2.40259pt too wide) in paragraph at lines 641--642
+Overfull \hbox (2.40259pt too wide) in paragraph at lines 643--644
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--661
+Underfull \hbox (badness 10000) in paragraph at lines 657--663
 []\OT1/ptm/m/n/10 The de-fined event type con-tains three prop-er-ties:
  []
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 655--661
+Underfull \hbox (badness 4084) in paragraph at lines 657--663
 \OT1/pcr/m/n/10 created_at\OT1/ptm/m/n/10 , \OT1/pcr/m/n/10 entry_id \OT1/ptm/m
 /n/10 and \OT1/pcr/m/n/10 temperature\OT1/ptm/m/n/10 . These
  []
@@ -927,10 +927,10 @@ pt>
 File: ./img/belt.png Graphic file (type png)
 
 <use ./img/belt.png>
-Package pdftex.def Info: ./img/belt.png used on input line 679.
+Package pdftex.def Info: ./img/belt.png used on input line 681.
 (pdftex.def)             Requested size: 241.70241pt x 85.72003pt.
 
-Overfull \hbox (2.40259pt too wide) in paragraph at lines 698--699
+Overfull \hbox (2.40259pt too wide) in paragraph at lines 700--701
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -938,7 +938,7 @@ Overfull \hbox (2.40259pt too wide) in paragraph at lines 698--699
 File: ./img/Sensor1Sombras.png Graphic file (type png)
 
 <use ./img/Sensor1Sombras.png>
-Package pdftex.def Info: ./img/Sensor1Sombras.png used on input line 752.
+Package pdftex.def Info: ./img/Sensor1Sombras.png used on input line 756.
 (pdftex.def)             Requested size: 509.80338pt x 186.69704pt.
 
 
@@ -999,32 +999,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: img/Comparativa.png Graphic file (type png)
 
 <use img/Comparativa.png>
-Package pdftex.def Info: img/Comparativa.png used on input line 806.
-(pdftex.def)             Requested size: 194.32256pt x 114.02397pt.
+Package pdftex.def Info: img/Comparativa.png used on input line 810.
+(pdftex.def)             Requested size: 242.9069pt x 142.53215pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 831.
+LaTeX Warning: Reference `' on page 6 undefined on input line 835.
 
 [6 <./img/Sensor1Sombras.png> <./img/Comparativa.png>]
-<img/IoTTEGRBFGeneratedEvents.png, id=52, 832.10875pt x 466.74374pt>
+<img/IoTTEGRBFGeneratedEvents.png, id=52, 811.03pt x 476.78125pt>
 File: img/IoTTEGRBFGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGRBFGeneratedEvents.png>
-Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 92
-8.
-(pdftex.def)             Requested size: 249.63455pt x 140.0242pt.
+Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 93
+2.
+(pdftex.def)             Requested size: 243.31087pt x 143.03548pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 6910) has occurred while \output is active []
-
- [7]
-(./table-FAW.tex
+[7] (./table-FAW.tex
 Overfull \hbox (4.5748pt too wide) in paragraph at lines 28--28
  []\OT1/ptm/m/n/8 ($\OML/cmm/m/it/8 s:ms$\OT1/ptm/m/n/8 )| 
  []
@@ -1071,33 +1067,33 @@ Underfull \hbox (badness 10000) in alignment at lines 28--28
 [][][][][][] 
  []
 
-) <img/FAWComparison.png, id=57, 584.1825pt x 341.275pt>
-File: img/FAWComparison.png Graphic file (type png)
+) <img/TwoFallsComparative.png, id=57, 1115.16624pt x 662.475pt>
+File: img/TwoFallsComparative.png Graphic file (type png)
 
-<use img/FAWComparison.png>
-Package pdftex.def Info: img/FAWComparison.png used on input line 1006.
-(pdftex.def)             Requested size: 204.46693pt x 119.44803pt.
+<use img/TwoFallsComparative.png>
+Package pdftex.def Info: img/TwoFallsComparative.png used on input line 1010.
+(pdftex.def)             Requested size: 223.0293pt x 132.49265pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./img/IoTTEGRBFGeneratedEvents.png>]
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1040--1041
+Overfull \hbox (16.80273pt too wide) in paragraph at lines 1044--1045
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1045--1046
+Overfull \hbox (16.80273pt too wide) in paragraph at lines 1049--1050
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1047--1048
+Overfull \hbox (16.80273pt too wide) in paragraph at lines 1051--1052
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.60278pt too wide) in paragraph at lines 1049--1050
+Overfull \hbox (21.60278pt too wide) in paragraph at lines 1053--1054
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1148,54 +1144,55 @@ Underfull \hbox (badness 10000) in alignment at lines 40--40
 [][][][][][] 
  []
 
-) <img/synchronisation1.png, id=62, 1059.96pt x 595.22375pt>
+) <img/synchronisation1.png, id=62, 1171.37625pt x 705.63625pt>
 File: img/synchronisation1.png Graphic file (type png)
 
 <use img/synchronisation1.png>
-Package pdftex.def Info: img/synchronisation1.png used on input line 1087.
-(pdftex.def)             Requested size: 211.98824pt x 119.04263pt.
+Package pdftex.def Info: img/synchronisation1.png used on input line 1091.
+(pdftex.def)             Requested size: 234.2711pt x 141.12474pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/synchronisation2.png, id=63, 1056.94875pt x 598.235pt>
+[9 <./img/TwoFallsComparative.png>]
+<img/synchronisation2.png, id=67, 1059.96pt x 619.31375pt>
 File: img/synchronisation2.png Graphic file (type png)
 
 <use img/synchronisation2.png>
-Package pdftex.def Info: img/synchronisation2.png used on input line 1102.
-(pdftex.def)             Requested size: 211.386pt x 119.64487pt.
- [9 <./img/FAWComparison.png>] (./bare_conf.bbl
-[10 <./img/synchronisation1.png> <./img/synchronisation2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+Package pdftex.def Info: img/synchronisation2.png used on input line 1106.
+(pdftex.def)             Requested size: 211.98824pt x 123.86055pt.
+ (./bare_conf.bbl [10 <./img/synchronisation1.png> <./img/synchronisation2.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 []\OT1/ptm/m/n/8 IoT-Analytics, ``White pa-per - iot plat-forms - the cen-tral
  []
 
 
-Underfull \hbox (badness 8094) in paragraph at lines 88--91
+Underfull \hbox (badness 8094) in paragraph at lines 93--96
 \OT1/ptm/m/n/8 back-bone for the in-ter-net of things,'' $https : / / iot-[]ana
 lytics . com /
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 93--95
+Underfull \hbox (badness 5345) in paragraph at lines 98--100
 []\OT1/ptm/m/n/8 Micro[]Research[]Finland[]Oy, ``Event gen-er-a-tor,'' $http : 
 / / www . mrf . ^^L /
  []
 
 
-Underfull \hbox (badness 4353) in paragraph at lines 133--138
+Underfull \hbox (badness 4353) in paragraph at lines 138--143
 []\OT1/ptm/m/n/8 M. L[]uder, G. Bieber, and R. Sa-lomon, ``Sturz-erken-nung mit
 -
  []
 
 
-Underfull \hbox (badness 4595) in paragraph at lines 133--138
+Underfull \hbox (badness 4595) in paragraph at lines 138--143
 \OT1/ptm/m/n/8 tels Luftdruck- und Beschle-u-ni-gungssen-sorik Air Pressure- an
 d
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 []\OT1/ptm/m/n/8 Arduino, ``Ar-duino web-site,'' $https : / / www . arduino . c
 c / en / Guide /
  []
@@ -1212,9 +1209,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
-
-] (./bare_conf.aux)
+[11] (./bare_conf.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1223,10 +1218,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7915 strings out of 493029
- 107334 string characters out of 6136234
- 223887 words of memory out of 5000000
- 11244 multiletter control sequences out of 15000+600000
+ 7919 strings out of 493029
+ 107417 string characters out of 6136234
+ 224903 words of memory out of 5000000
+ 11248 multiletter control sequences out of 15000+600000
  47806 words of font info for 99 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,18n,51p,476b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1245,7 +1240,7 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 1262037 bytes).
+Output written on bare_conf.pdf (11 pages, 1333997 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

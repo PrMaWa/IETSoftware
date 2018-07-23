@@ -35,50 +35,53 @@ I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Grzegorczyk
 Warning--empty booktitle in Kozina
 Warning--empty year in Kozina
 Warning--empty journal in Luder2009
+Warning--empty journal in colladomachine
+Warning--missing publisher in colladoTriaxal
 
 Done.
-You've used 25 entries,
+You've used 28 entries,
             4087 wiz_defined-function locations,
-            974 strings with 12130 characters,
-and the built_in function-call counts, 13726 in all, are:
-= -- 1058
-> -- 309
-< -- 73
-+ -- 164
-- -- 66
-* -- 589
-:= -- 2168
-add.period$ -- 53
-call.type$ -- 25
-change.case$ -- 23
+            991 strings with 12790 characters,
+and the built_in function-call counts, 15096 in all, are:
+= -- 1152
+> -- 356
+< -- 75
++ -- 186
+- -- 77
+* -- 658
+:= -- 2386
+add.period$ -- 58
+call.type$ -- 28
+change.case$ -- 25
 chr.to.int$ -- 171
-cite$ -- 28
-duplicate$ -- 1060
-empty$ -- 1234
-format.name$ -- 73
-if$ -- 3153
+cite$ -- 34
+duplicate$ -- 1174
+empty$ -- 1360
+format.name$ -- 87
+if$ -- 3461
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 202
-newline$ -- 98
-num.names$ -- 25
-pop$ -- 533
+int.to.str$ -- 28
+missing$ -- 228
+newline$ -- 107
+num.names$ -- 28
+pop$ -- 605
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1067
+skip$ -- 1170
 stack$ -- 0
-substring$ -- 427
-swap$ -- 737
-text.length$ -- 16
+substring$ -- 429
+swap$ -- 811
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 25
-warning$ -- 3
-while$ -- 55
-width$ -- 27
-write$ -- 231
+type$ -- 28
+warning$ -- 6
+while$ -- 58
+width$ -- 30
+write$ -- 254
 (There were 6 error messages)
