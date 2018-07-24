@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.16)  23 JUL 2018 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.16)  24 JUL 2018 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -929,16 +929,28 @@ File: ./img/belt.png Graphic file (type png)
 <use ./img/belt.png>
 Package pdftex.def Info: ./img/belt.png used on input line 681.
 (pdftex.def)             Requested size: 241.70241pt x 85.72003pt.
+ <./img/axis.png, id=38, 1115.66812pt x 936.49875pt>
+File: ./img/axis.png Graphic file (type png)
 
-Overfull \hbox (2.40259pt too wide) in paragraph at lines 700--701
+<use ./img/axis.png>
+Package pdftex.def Info: ./img/axis.png used on input line 714.
+(pdftex.def)             Requested size: 267.76582pt x 224.76428pt.
+
+Overfull \hbox (15.76582pt too wide) in paragraph at lines 714--715
+ [][] 
+ []
+
+
+Overfull \hbox (2.40259pt too wide) in paragraph at lines 734--735
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<./img/Sensor1Sombras.png, id=38, 1359.479pt x 497.86pt>
+[5 <./img/belt.png> <./img/axis.png>]
+<./img/Sensor1Sombras.png, id=44, 1359.479pt x 497.86pt>
 File: ./img/Sensor1Sombras.png Graphic file (type png)
 
 <use ./img/Sensor1Sombras.png>
-Package pdftex.def Info: ./img/Sensor1Sombras.png used on input line 756.
+Package pdftex.def Info: ./img/Sensor1Sombras.png used on input line 794.
 (pdftex.def)             Requested size: 509.80338pt x 186.69704pt.
 
 
@@ -991,36 +1003,28 @@ Underfull \hbox (badness 10000) in alignment at lines 23--23
 [][][][][][] 
  []
 
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./img/belt.png>] <img/Comparativa.png, id=43, 485.815pt x 285.065pt>
+) <img/Comparativa.png, id=45, 485.815pt x 285.065pt>
 File: img/Comparativa.png Graphic file (type png)
 
 <use img/Comparativa.png>
-Package pdftex.def Info: img/Comparativa.png used on input line 810.
+Package pdftex.def Info: img/Comparativa.png used on input line 848.
 (pdftex.def)             Requested size: 242.9069pt x 142.53215pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 835.
+LaTeX Warning: Reference `' on page 6 undefined on input line 873.
 
-[6 <./img/Sensor1Sombras.png> <./img/Comparativa.png>]
-<img/IoTTEGRBFGeneratedEvents.png, id=52, 811.03pt x 476.78125pt>
+[6] [7 <./img/Sensor1Sombras.png> <./img/Comparativa.png>]
+<img/IoTTEGRBFGeneratedEvents.png, id=58, 811.03pt x 476.78125pt>
 File: img/IoTTEGRBFGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGRBFGeneratedEvents.png>
-Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 93
-2.
+Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 97
+0.
 (pdftex.def)             Requested size: 243.31087pt x 143.03548pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7] (./table-FAW.tex
+ [8 <./img/IoTTEGRBFGeneratedEvents.png>] (./table-FAW.tex
 Overfull \hbox (4.5748pt too wide) in paragraph at lines 28--28
  []\OT1/ptm/m/n/8 ($\OML/cmm/m/it/8 s:ms$\OT1/ptm/m/n/8 )| 
  []
@@ -1067,37 +1071,21 @@ Underfull \hbox (badness 10000) in alignment at lines 28--28
 [][][][][][] 
  []
 
-) <img/TwoFallsComparative.png, id=57, 1115.16624pt x 662.475pt>
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/TwoFallsComparative.png, id=63, 1115.16624pt x 662.475pt>
 File: img/TwoFallsComparative.png Graphic file (type png)
 
 <use img/TwoFallsComparative.png>
-Package pdftex.def Info: img/TwoFallsComparative.png used on input line 1010.
+Package pdftex.def Info: img/TwoFallsComparative.png used on input line 1061.
 (pdftex.def)             Requested size: 223.0293pt x 132.49265pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./img/IoTTEGRBFGeneratedEvents.png>]
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1044--1045
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1049--1050
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (16.80273pt too wide) in paragraph at lines 1051--1052
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.60278pt too wide) in paragraph at lines 1053--1054
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-(./table-Synchro.tex
+[9 <./img/TwoFallsComparative.png>] (./table-Synchro.tex
 Overfull \hbox (4.5748pt too wide) in paragraph at lines 40--40
  []\OT1/ptm/m/n/8 ($\OML/cmm/m/it/8 s:ms$\OT1/ptm/m/n/8 )| 
  []
@@ -1144,25 +1132,32 @@ Underfull \hbox (badness 10000) in alignment at lines 40--40
 [][][][][][] 
  []
 
-) <img/synchronisation1.png, id=62, 1171.37625pt x 705.63625pt>
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/synchronisation1.png, id=68, 1171.37625pt x 705.63625pt>
 File: img/synchronisation1.png Graphic file (type png)
 
 <use img/synchronisation1.png>
-Package pdftex.def Info: img/synchronisation1.png used on input line 1091.
+Package pdftex.def Info: img/synchronisation1.png used on input line 1148.
 (pdftex.def)             Requested size: 234.2711pt x 141.12474pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./img/TwoFallsComparative.png>]
-<img/synchronisation2.png, id=67, 1059.96pt x 619.31375pt>
+<img/synchronisation2.png, id=69, 1059.96pt x 619.31375pt>
 File: img/synchronisation2.png Graphic file (type png)
 
 <use img/synchronisation2.png>
-Package pdftex.def Info: img/synchronisation2.png used on input line 1106.
+Package pdftex.def Info: img/synchronisation2.png used on input line 1163.
 (pdftex.def)             Requested size: 211.98824pt x 123.86055pt.
- (./bare_conf.bbl [10 <./img/synchronisation1.png> <./img/synchronisation2.png>
-]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./img/synchronisation1.png>] (./bare_conf.bbl [11 <./img/synchronisation2.
+png>]
 Underfull \hbox (badness 10000) in paragraph at lines 93--96
 []\OT1/ptm/m/n/8 IoT-Analytics, ``White pa-per - iot plat-forms - the cen-tral
  []
@@ -1192,7 +1187,7 @@ d
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
 []\OT1/ptm/m/n/8 Arduino, ``Ar-duino web-site,'' $https : / / www . arduino . c
 c / en / Guide /
  []
@@ -1209,7 +1204,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11] (./bare_conf.aux)
+[12
+
+] (./bare_conf.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1218,10 +1215,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7919 strings out of 493029
- 107417 string characters out of 6136234
- 224903 words of memory out of 5000000
- 11248 multiletter control sequences out of 15000+600000
+ 7926 strings out of 493029
+ 107538 string characters out of 6136234
+ 234919 words of memory out of 5000000
+ 11254 multiletter control sequences out of 15000+600000
  47806 words of font info for 99 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,18n,51p,476b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1240,10 +1237,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (11 pages, 1333997 bytes).
+Output written on bare_conf.pdf (12 pages, 1463996 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

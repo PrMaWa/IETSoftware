@@ -685,13 +685,47 @@ includes a five sensor nodes which is based on ZigBee/IEEE 802.15.4\footnote{\ur
 
 Four of the sensor nodes are acting as end-devices (S1-S4) and the other node as a coordinator. 
 The end-devices have attached an accelerometer and gyroscope which acquire continuously sensor 
-data and is sent wirelessly to the coordinator using the ZigBee protocol. The coordinator receives 
-the incoming data and it has the function to evaluate the patient's status. 
+data and is sent wirelessly to the coordinator using the ZigBee protocol. The data is sent in the following format:
+ \begin{center}
+  \texttt{AccelMagnitude, Gyro-X, Gyro-Y, Gyro-Z}
+ \end{center}
+\begin{itemize}
+  \item \textbf{AccelMagnitude} $\rightarrow$ This value represents the acceleration magnitude which is calculated 
+  by the Equation (\ref{eq:acel}) on page \pageref{eq:acel}. This value is a reference for impact detection. 
+  The value's unit is m/s$^2$.
+  \item \textbf{Gyro-X} $\rightarrow$ represents the angular acceleration in X direction. The value's unit is 
+  degree per second (dps).
+  \item \textbf{Gyro-Y} $\rightarrow$ represents the angular acceleration in Y direction. The value's unit is 
+  degree per second (dps).
+  \item \textbf{Gyro-Z} represents the angular acceleration in Z direction. The value's unit is degree per second (dps).
+\end{itemize}
+The coordinator receives the incoming data and it has the function to evaluate the patient's status.
+
+The proposed positioning of sensors in the belt architecture was designed mainly for two reasons. The first reason 
+reflects the requirement of a safety critical system to which the fall-detection prototype belongs. The reliability 
+of the system must be ensured, in case one of the nodes fails. Using the architecture shown above (see Figure \ref{fig:belt}), 
+a mirroring of the opposing sensors is achieved, which means that we get identical sensor values, only with different signs. 
+In case a node fails, the opposite value can be taken as a reference to detect a possible fall. The other reason for 
+applying this architecture effects the system's accuracy. Taking into consideration the following illustration 
+(see Figure \ref{fig:axisreference}) facilitates the recognition of several fall-types.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.24]{./img/axis}
+  \caption[Three axis reference draft]{Three axis reference draft \cite{LaBlunda.2016b,LuigiMasterThesis}}
+  \label{fig:axisreference}
+\end{figure}
+
+The idea is, that with this special positioning more precise fall-characterization are achieved. Considering 
+the event that a person does a left rotation and suffers a frontal impact to the ground (forward fall), 
+the gyroscope information (single value axis X, Y and Z) could be used for the detection of rotation and the 
+acceleration magnitude to detect the impact to the ground, see Equation (\ref{eq:acel}).
+
 To test the system's accuracy different fall-types were reproduced with several test persons. A 
 test procedure based on Li et al.~\cite{Li2009} and Pannurat et al.~\cite{Pannurat2014} was developed which includes 
 several motions and fall-types which are typical in nursing homes and hospitals.
 
-Taking into account the architecture of the prototype and the rule to define a fall (see Section \ref{subsec:analysis}), 
+Taking into account the architecture of the prototype and the rule to define a fall, see Equation (\ref{eq:acel}), 
 the EPL of EsperTech pattern to define the fall situation is the one shown in the Example~\ref{FallPattern}.
 
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=SQL,caption=Fall pattern,label=FallPattern]
@@ -708,7 +742,11 @@ the EPL of EsperTech pattern to define the fall situation is the one shown in th
  \end{lstlisting}
 
 The illustrated EPL query is based on the physical principle depicted in 
-figure \ref{fig:grafica}. With the \textit{select} statement the event properties 
+Figure \ref{fig:grafica}. Important to know is that for EPL query two nodes 
+were used (one frontal sensor node \& one lateral sensor node) to apply the 
+fall-detection, but in future this query will be extended to four sensor nodes. 
+The four node architecture (see Figure \ref{fig:belt}) is currently only used 
+for redundancy purposes. With the \textit{select} statement the event properties 
 are selected to create a pattern for fall-detection. In the given example the
 following event properties are selected:
 
@@ -803,7 +841,7 @@ the first column of the Table. The second column show the acceleration values ($
 are deployed the normalised acceleration values ($N(m/s^2)$) according to the fall maximum value. In 
 Figure~\ref{fig:Sensor1} a comparison of the normalised acceleration behaviour during the previous RBF falls is shown. 
 This comparison show a similar behaviour of the acceleration during the RBF falls.
-Moreover, the acceleration in these two RBF falls follow the rule that define a fall, see Equation~\ref{eq:caida}.
+Moreover, the acceleration in these two RBF falls follow the rule that define a fall, see Equation (\ref{eq:caida}).
 
 \begin{figure}[!h]
   \centering
@@ -961,9 +999,22 @@ based on four sensor nodes (S1-S4), but with the following significant innovatio
  \item The improved Prototype is using BLE for wireless data transmission. Using BLE 
  brings the advantage to build up a communication infrastructure with the smartphone 
  to automatically inform the emergency services without any additional hardware.
+ \item The dataset which is sent by the sensor nodes (S1- S4) is composed as follows 
+ and includes the values unit m/$s^2$:
+ \begin{center}
+  \texttt{SensorID, X-Acceleration, Y-Acceleration, Z-Acceleration}
+ \end{center}
+ Compared to the dataset format of the previous prototype the sensor identification 
+ number was added and the significantly change is that only the single axis values of 
+ the accelerometer are sent. Based on the individual axis values of the accelerometer, 
+ the orientation of the person can also be determined. Assuming the person is in a standing 
+ position, the x-axis corresponds to 1G ($\pm$ 9.81m/$s^2$) and the other two axes would be 
+ approximately 0G. This indicates that the person is standing. As the person changes 
+ position, the gravitational acceleration will occur on one of the other axis. For that 
+ reason, in the improved prototype the single axis values were taken as orientation 
+ reference. To detect the impact the single values were used to calculate the acceleration 
+ magnitude based on Equation (\ref{eq:acel}) (see page \pageref{eq:acel}).
 \end{itemize}
-
-\textbf{*To talk about the improvements in the prototype*}
 
 \subsection{Fall simulation test events} % \subsection{Experiment process}
 
@@ -986,7 +1037,7 @@ and taking into account the alterations because the mentioned factors, the impac
 including the peaks, are selected in order to analyse data properly and to study the acceleration 
 behaviour during FAW fall. The range of extracted values are a set of data that happen in less 
 than a time window of 1 second, to meet the fall rule of~\cite{Luder2009} described in 
-Equation~(\ref{eq:caida}). The Table~\ref{tabla:FAW} shows the acceleration value during one FAW 
+Equation (\ref{eq:caida}). The Table~\ref{tabla:FAW} shows the acceleration value during one FAW 
 fall of person 1 and person 2. 
 
 \begin{table}[!h]
@@ -1012,21 +1063,21 @@ shown. These comparisons show a similar behaviour of the acceleration during the
   \label{fig:FAWcomparison}
 \end{figure}
 
-The acceleration behaviour during the FAW consists on:
+For the FAW, we have decided to define the acceleration behaviour with normalised values; so the 
+normalised acceleration behaviour during the FAW consists on:
 \begin{enumerate}
- \item the variation of its values while the person is walking, the acceleration has a normalised values 
- between [0, 0,35].
- \item as a consequence of the impact of the person against a wall, the acceleration normalised values 
- has to be greater than 0,7.
- \item the normalised acceleration value decreases. The values of the normalised acceleration are between 
- [0, 0,35]; the number of times that the acceleration value is in the mentioned range is variable. That 
- number of times depends on the size of the person; the larger person results in a longer range and if the 
- person retains a position prior to a fall thanks to the wall. Moreover, a subtle peak could appear as a 
- consequence of a rebound.
+ \item the variation of its values while the person is walking, the normalised acceleration values go increasing and
+ decreasing in a range [0, 0.35].
+ \item as a consequence of the impact of the person against a wall, the acceleration normalised value 
+ has to be greater than 0.7.
+ \item the normalised acceleration values decreases to a range [0, 0.35]. The values of the acceleration are 
+ in the mentioned range depending on the size of the person; the larger person results in a longer range 
+ and if the person retains a position prior to a fall thanks to the wall. Moreover, a subtle peak could 
+ appear as a consequence of a rebound.
  \item a second impact happens when the person hit the ground, the acceleration normalised values has to 
- be greater than 0,7.
+ be greater than 0.7.
  \item finally, the person is laying on the ground and the normalised acceleration value decreases. The 
- values of the normalised acceleration are between [0, 0,35] and no subtle peaks appear. 
+ values of the acceleration are between [0.10, 0.35] and no subtle peaks appear. 
 \end{enumerate}
 
 The same analysis process has been done to the rest of sensors, and the behaviour of the acceleration of all of them follows the same pattern.
@@ -1040,17 +1091,23 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
-   <variable name="Base" value="9.8"/>
-   <variable name="ImpactWall" min="40.0" max="156.96"/>
-   <variable name="Impact" min="40.0" max="156.96"/>
-   <variable name="Laying" value="10"/>
+   <variable name="Base" value="9.81"/>
+   <variable name="ImpactWall" 
+         min="$(Base)+$(Base)*0.7" max="$(Base)*2"/>
+   <variable name="Impact" min="$(Base)+$(Base)*0.7" 
+                                   max="$(Base)*2"/>
   </variables>
   <rules>
-   <rule weight="0.25" min="$(Base)-5" max="$(Base)+5"/>
+   <rule weight="0.25" min="0" 
+         max="$(Base)+$(Base)*0.35" sequence="inc"/>
+   <rule weight="0.25" min="0" 
+         max="$(Base)+$(Base)*0.35" sequence="dec"/>
    <rule weight="1" value="$(ImpactWall)"/>
-   <rule weight="0.25" min="$(Base)-5" max="$(Fall)+5"/>
+   <rule weight="0.25" min="0" 
+                        max="$(Base)+$(Base)*0.35"/>
    <rule weight="1" value="$(Impact)"/>
-   <rule weight="0" min="$(Laying)-3" max="$(Laying)+3"/>
+   <rule weight="0" min="$(Base)+$(Base)*0.10" 
+                        max="$(Base)+$(Base)*0.35"/>
   </rules>
   </custom_conditions>
 \end{lstlisting}
@@ -1123,6 +1180,18 @@ is conscious and is able to move and call to the emergency services, if it is ne
 falls and does not stand up this means that maybe the person is unconscious or is not able to move and call to the emergency
 services. Therefore, waiting at least 2 seconds between falls in our test scenarios, will help not only to understand 
 better the behaviour of the acceleration but also to do a better fall simulation.
+
+Comparing the measured values of the fall-events (forward fall, fall against wall and rolling out of bed) of the two 
+prototypes, it can be determined that the measured impact values of the first prototype are considerably higher than 
+those of the improved solution. This difference is caused by multiple reasons. The main reason is the different 
+experimental set-up of the first prototype and the improved solution. The hardware design of the first prototype is 
+bulky compared to the improved one. Due to the bulky construction the sensor nodes are more exposed to vibrations and 
+shocks, which results in higher impact values. Additionally the sensor nodes shifted during the fall. The result was 
+that the test person repositioned the sensor nodes which leads to influence the impact value (acceleration magnitude). 
+Taking this problem into consideration this problem was solved by introducing a smaller micro-controller platform 
+which was introduced in  section \ref{sec:improvedprototype}. Despite the design differences in the two prototypes, 
+we are able to detect falls
+
 
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
