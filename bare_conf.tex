@@ -1020,7 +1020,8 @@ based on four sensor nodes (S1-S4), but with the following significant innovatio
 
 The second fall to generate the test events consists on the impact of the person with 
 a wall and falling on the knees and then on the chest: \textit{fall against wall} (FAW). 
-In this study two persons have been analysed; they have been doing fall test for a period 
+In this study we have used two healthy subjects, and we have recorded falls with all 
+possible realism while also trying to avoid risks. They have been doing fall test for a period 
 of 2 minutes, the FAW fall type. The analysed data and videos can be found in ~\cite{}.
 
 In this analysis the same steps that the ones described in Section~\ref{sec:basicprototype} 
@@ -1117,6 +1118,7 @@ define the behaviour of the acceleration in this type of fall is shown in Exampl
 \textbf{* We must compare the prototype with and without the improvements*}
 
 \subsection{Detected problems}
+\label{sub:detectedproblems}
 
 After testing the used fall detection prototype, some problems were 
 found. Moreover, some considerations will be applied in future tests.
@@ -1158,6 +1160,7 @@ software. Talking about the software, the synchronisation in the prototype is an
  sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
  simulation, but the obtained acceleration values were from three of them, one of the sensor does not transmit data 
  in one moment of the simulation, see Figure~\ref{fig:synchronisation2}.
+ 
  \begin{figure}[!h]
   \centering
   \includegraphics[scale=0.2]{img/synchronisation2.png}
@@ -1190,8 +1193,7 @@ shocks, which results in higher impact values. Additionally the sensor nodes shi
 that the test person repositioned the sensor nodes which leads to influence the impact value (acceleration magnitude). 
 Taking this problem into consideration this problem was solved by introducing a smaller micro-controller platform 
 which was introduced in  section \ref{sec:improvedprototype}. Despite the design differences in the two prototypes, 
-we are able to detect falls
-
+we are able to detect falls.
 
 \section{Conclusion and Future Work}
 \label{sec:conclusions}
@@ -1214,6 +1216,13 @@ The introduced IoT-TEG functionality will be improved with a new property. This 
 for event attributes which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
 to generate dependent values thanks to the \texttt{dependece} property. This property generates the event attribute value 
 according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
+
+To generate test events, reliable data transmission of all four sensor nodes (S1-S4) must be guaranteed. As described in 
+the Section~\ref{sub:detectedproblems} the synchronisation problem can lead to data loss during data transmission and 
+thus influence the analysis of falls (see Table \ref{tabla:Synchro}). For this reason, the use of a real-time system 
+based microcontroller platform is planned, which facilitates the synchronisation of the sensor nodes using a 
+priority-controlled task scheduler. In addition, the battery lifespan should be extended and the hardware design of the 
+prototype should be small as possible so that patients are not restricted in their movements.
 
 Fall detection systems are safety critical. Therefore, new developments will include hazards analysis methods
 to satisfy safety standars, i.e. IEC61508, IEC60601, etc.
