@@ -32,6 +32,10 @@ Repeated entry---line 678 of file references.bib
  : @misc{Starcom:2016
  :                   ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 719 of file references.bib
+ : @incollection{LaBlunda.2016c
+ :                             ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -43,45 +47,45 @@ Warning--empty journal in colladomachine
 Warning--missing publisher in colladoTriaxal
 
 Done.
-You've used 29 entries,
+You've used 30 entries,
             4087 wiz_defined-function locations,
-            996 strings with 12944 characters,
-and the built_in function-call counts, 15421 in all, are:
-= -- 1175
-> -- 360
+            1001 strings with 13104 characters,
+and the built_in function-call counts, 15879 in all, are:
+= -- 1207
+> -- 369
 < -- 75
-+ -- 188
-- -- 78
-* -- 666
-:= -- 2442
-add.period$ -- 60
-call.type$ -- 29
-change.case$ -- 26
++ -- 192
+- -- 80
+* -- 686
+:= -- 2514
+add.period$ -- 62
+call.type$ -- 30
+change.case$ -- 27
 chr.to.int$ -- 171
-cite$ -- 35
-duplicate$ -- 1204
-empty$ -- 1396
-format.name$ -- 88
-if$ -- 3534
+cite$ -- 36
+duplicate$ -- 1245
+empty$ -- 1452
+format.name$ -- 91
+if$ -- 3642
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 235
-newline$ -- 110
-num.names$ -- 29
-pop$ -- 626
+int.to.str$ -- 30
+missing$ -- 242
+newline$ -- 113
+num.names$ -- 30
+pop$ -- 649
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1197
+skip$ -- 1235
 stack$ -- 0
-substring$ -- 430
-swap$ -- 826
+substring$ -- 431
+swap$ -- 847
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 29
+type$ -- 30
 warning$ -- 6
-while$ -- 59
-width$ -- 31
-write$ -- 261
-(There were 6 error messages)
+while$ -- 60
+width$ -- 32
+write$ -- 269
+(There were 7 error messages)
