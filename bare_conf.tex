@@ -706,11 +706,11 @@ data and is sent wirelessly to the coordinator using the ZigBee protocol. The da
   \item \textbf{AccelMagnitude} $\rightarrow$ This value represents the acceleration magnitude which is calculated 
   by the Equation (\ref{eq:acel}), see Section~\ref{subsec:analysis}. This value is a reference for impact detection. 
   The value's unit is m/s$^2$.
-  \item \textbf{Gyro-X} $\rightarrow$ represents the angular acceleration in X direction. The value's unit is 
+  \item \textbf{Gyro-X} $\rightarrow$ represents the angular velocity in X direction. The value's unit is 
   degree per second (dps).
-  \item \textbf{Gyro-Y} $\rightarrow$ represents the angular acceleration in Y direction. The value's unit is 
+  \item \textbf{Gyro-Y} $\rightarrow$ represents the angular velocity in Y direction. The value's unit is 
   degree per second (dps).
-  \item \textbf{Gyro-Z} represents the angular acceleration in Z direction. The value's unit is degree per second (dps).
+  \item \textbf{Gyro-Z} represents the angular velocity in Z direction. The value's unit is degree per second (dps).
 \end{itemize}
 The coordinator receives the incoming data and it has the function to evaluate the patient's status.
 
@@ -729,7 +729,7 @@ applying this architecture effects the system's accuracy. Taking into considerat
   \label{fig:axisreference}
 \end{figure}
 
-The idea is, that with this special positioning more precise fall-characterization are achieved. Considering 
+The special positioning of the nodes on the belt results in a more precise fall-characterisation. Considering 
 the event that a person does a left rotation and suffers a frontal impact to the ground (forward fall), 
 the gyroscope information (single value axis X, Y and Z) could be used for the detection of rotation and the 
 acceleration magnitude to detect the impact to the ground, see Equation (\ref{eq:acel}), see Section~\ref{subsec:analysis}.
@@ -1261,7 +1261,7 @@ pressure, and medical data such as ECG, in order to identify and define the fall
 
 \section{Future Work}
 
-The main goal of this study is to improve IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} tool in order to generate faithful 
+The main goal of this study is to improve the IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} tool in order to generate faithful 
 test events which simulate the 
 relevant situations that want to be filtered and, sometimes, are very difficult to imitate: adverse environment conditions, 
 rise or fall in blood pressure, heart attack, falls... IoT-TEG is an ongoing tool, so more functionalities will be added
@@ -1270,7 +1270,7 @@ the real situations and behaviour of the events.
 
 The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
 for event attributes which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
-to generate dependent values thanks to the \texttt{dependece} property. This property generates the event attribute value 
+to generate dependent values thanks to the \texttt{dependence} property. This property generates the event attribute value 
 according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
 
 To generate test events, reliable data transmission of all four sensor nodes (S1-S4) must be guaranteed. As described in 
@@ -1280,8 +1280,8 @@ based microcontroller platform is planned, which facilitates the synchronisation
 priority-controlled task scheduler. In addition, the battery lifespan should be extended and the hardware design of the 
 prototype should be small as possible so that patients are not restricted in their movements.
 
-Fall detection systems are safety critical. Therefore, new developments will include hazards analysis methods
-to satisfy safety standars, i.e. IEC61508, IEC60601, etc.
+Fall detection systems are safety critical. Therefore, new developments will include hazard analysis methods
+to satisfy safety standards, i.e. IEC61508, IEC60601, etc.
 
 \section*{Acknowledgment}
 
