@@ -47,45 +47,45 @@ Warning--empty journal in colladomachine
 Warning--missing publisher in colladoTriaxal
 
 Done.
-You've used 30 entries,
+You've used 32 entries,
             4087 wiz_defined-function locations,
-            1001 strings with 13104 characters,
-and the built_in function-call counts, 15879 in all, are:
-= -- 1207
-> -- 369
-< -- 75
-+ -- 192
-- -- 80
-* -- 686
-:= -- 2514
-add.period$ -- 62
-call.type$ -- 30
-change.case$ -- 27
-chr.to.int$ -- 171
-cite$ -- 36
-duplicate$ -- 1245
-empty$ -- 1452
-format.name$ -- 91
-if$ -- 3642
+            1015 strings with 13477 characters,
+and the built_in function-call counts, 17227 in all, are:
+= -- 1324
+> -- 398
+< -- 85
++ -- 208
+- -- 85
+* -- 751
+:= -- 2730
+add.period$ -- 66
+call.type$ -- 32
+change.case$ -- 30
+chr.to.int$ -- 192
+cite$ -- 38
+duplicate$ -- 1348
+empty$ -- 1554
+format.name$ -- 98
+if$ -- 3954
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 242
-newline$ -- 113
-num.names$ -- 30
-pop$ -- 649
+int.to.str$ -- 32
+missing$ -- 259
+newline$ -- 119
+num.names$ -- 32
+pop$ -- 683
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1235
+skip$ -- 1340
 stack$ -- 0
-substring$ -- 431
-swap$ -- 847
-text.length$ -- 18
+substring$ -- 484
+swap$ -- 930
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 30
+type$ -- 32
 warning$ -- 6
-while$ -- 60
-width$ -- 32
-write$ -- 269
+while$ -- 65
+width$ -- 34
+write$ -- 289
 (There were 7 error messages)

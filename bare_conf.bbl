@@ -151,6 +151,16 @@ O.~Etzion and P.~Niblett, \emph{Event Processing in Action}, 1st~ed.\hskip 1em
   plus 0.5em minus 0.4em\relax Greenwich, CT, USA: Manning Publications Co.,
   2010.
 
+\bibitem{gutierrez2018}
+L.~Guti{\'e}rrez-Madro{\~n}al, A.~Garc{\'i}a-Dom{\'i}nguez, and I.~Medina-Bulo,
+  ``Evolutionary mutation testing for iot with recorded and generated events,''
+  \emph{Software: Practice and Experience}, 2018, accepted, to be published.
+
+\bibitem{jia2011}
+Y.~Jia and M.~Harman, ``An analysis and survey of the development of mutation
+  testing,'' \emph{IEEE Transactions on Software Engineering}, vol.~37, no.~5,
+  pp. 649--678, Sept 2011.
+
 \bibitem{LuigiMasterThesis}
 L.~La~Blunda, ``Die sturzerkennung basierend auf body area networks,'' 2016.
 
